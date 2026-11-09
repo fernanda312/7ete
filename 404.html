@@ -5,7 +5,7 @@
 <title>7ete</title>
 <script>
 (function () {
-  var seg = 1; // /7ete/ is one path segment below the domain root
+  var seg = 0; // custom domain serves at the root: no subpath segment
   var l = window.location;
   var path = l.pathname.split("/").slice(1 + seg).join("/");
   var qs = l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "";
