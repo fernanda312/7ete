@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7ete | Sistema de Gestão de Microcrédito</title>
+<meta name="description" content="7ete — microcrédito com garantia em Moçambique. Condições claras, análise responsável e acompanhamento digital do pedido.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;700;800&family=Pinyon+Script&family=Playfair+Display:ital,wght@1,400;1,600&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@100;200&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#000;color:#fff}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+  p,li{font-weight:300}
+  a{color:inherit}
+  img,video{display:block;width:100%;height:auto;background:#000}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  .display{font-family:"Cormorant Garamond",serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .script{font-family:"Pinyon Script",cursive;font-weight:400;text-transform:none;letter-spacing:0;font-size:.95em}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:17px 32px;border-radius:6px;text-decoration:none;font-weight:800;font-size:16px;border:0;cursor:pointer;text-transform:uppercase;letter-spacing:.03em}
+  .btn-grad{background:linear-gradient(135deg,#5a210e 0%,#050304 100%);color:#fff;border:1px solid #5a210e}
+  .btnrow{display:flex;gap:12px;flex-wrap:wrap}
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;overflow:hidden;background:#000;padding:0}
+  .hero-cta{position:relative;z-index:1}
+  .hero-btn{display:inline-flex;gap:4px;text-decoration:none}
+  .hero-btn-text{display:flex;align-items:center;background:linear-gradient(135deg,#5a210e 0%,#050304 100%);border:1px solid rgba(255,255,255,.4);box-shadow:0 6px 20px rgba(0,0,0,.4);color:#fff;font-family:"Archivo",system-ui,sans-serif;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:14px 22px}
+  .hero-btn-arrow{display:flex;align-items:center;background:linear-gradient(135deg,#5a210e 0%,#050304 100%);border:1px solid rgba(255,255,255,.4);box-shadow:0 6px 20px rgba(0,0,0,.4);color:#fff;font-size:16px;padding:14px 14px}
+  .hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#000}
+  .hero-name{position:relative;z-index:1;margin:0;padding:.15em .4em;border-radius:6px;background:rgba(0,0,0,.38);font-family:"Syncopate",sans-serif;font-weight:700;font-size:clamp(64px,17vw,180px);letter-spacing:.1em;text-indent:.1em;line-height:1;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.65);animation:titlepass 1.4s cubic-bezier(.22,1,.36,1) both}
+@keyframes titlepass{0%{transform:translateX(-110vw);opacity:0}70%{transform:translateX(3vw);opacity:1}100%{transform:translateX(0);opacity:1}}
+.hero-t{display:inline-block;font-size:1.4em;letter-spacing:inherit;background:linear-gradient(135deg,#5a210e 0%,#050304 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+@media (prefers-reduced-motion:reduce){.hero-name{animation:none}}
+  .hero-logo{position:absolute;top:18px;left:18px;width:52px;height:auto;z-index:2;pointer-events:none;background:transparent}
+.hero-lockup{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:14px}
+.hero-mark{height:44px;width:auto;aspect-ratio:160/120;display:block}
+.hero-brand{font-family:"Montserrat",sans-serif;font-weight:200;font-size:clamp(26px,6.5vw,48px);letter-spacing:.12em;color:#fff;white-space:nowrap}
+@media(min-width:768px){.hero-mark{height:56px}}
+.hero-eyebrow{position:absolute;top:22px;left:50%;transform:translateX(-50%);z-index:3;margin:0;font-family:"Montserrat",sans-serif;font-weight:100;font-size:clamp(11px,3.2vw,20px);letter-spacing:.35em;text-indent:.35em;text-align:center;white-space:nowrap;text-transform:uppercase;color:#fff}
+.hero-caret{display:inline-block;width:2px;height:1em;margin-left:2px;background:#fff;vertical-align:-.1em;animation:caretblink .8s steps(1) infinite}
+@keyframes caretblink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@media (min-width:768px){.hero-eyebrow{top:28px}}
+@media (prefers-reduced-motion:reduce){.hero-caret{display:none}}
+  @media(min-width:860px){.hero-logo{width:68px;top:24px;left:28px}}
+  .lead{color:#c2c2c2;font-size:18px;line-height:1.65;max-width:640px;margin:0 0 28px}
+  .center .lead{margin-left:auto;margin-right:auto}
+  section.block{padding:96px 0;border-top:1px solid #1c1c1c}
+  @media(max-width:859px){section.block{padding:64px 0}}
+  h2{font-size:clamp(42px,10vw,110px);line-height:1.02;margin:0 0 24px;color:#fff}
+  .center{text-align:center}
+  .center h2{margin-left:auto;margin-right:auto}
+  .muted{color:#999;margin:8px 0 18px}
+  .steps{display:grid;gap:16px;margin-top:40px}
+  @media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{padding:30px;border:1px solid #262626;border-radius:18px;background:#0e0e0e}
+  .step .num{font-size:64px;font-weight:800;line-height:1;color:#fff}
+  .step h3{font-family:"Cormorant Garamond",serif;font-weight:700;letter-spacing:.03em;font-size:24px;margin:16px 0 10px;color:#fff}
+  .step p{color:#c2c2c2;margin:0;font-size:17px}
+  .stats{display:grid;gap:18px;border-top:1px solid #262626;border-bottom:1px solid #262626;padding:30px 0;margin-top:40px}
+  @media(min-width:860px){.stats{grid-template-columns:repeat(3,1fr)}}
+  .stat{text-align:left}
+  .stat .mark{font-size:clamp(56px,7vw,84px);font-weight:800;line-height:1;letter-spacing:-.03em;color:#fff}
+  .stat p{margin:10px 0 0;color:#c2c2c2;font-size:17px}
+  details.faq{border-top:1px solid #262626;padding:26px 0}
+  details.faq:last-of-type{border-bottom:1px solid #262626}
+  details.faq summary{cursor:pointer;font-family:"Cormorant Garamond",serif;font-weight:700;letter-spacing:.03em;font-size:clamp(20px,4.5vw,28px);list-style:none;display:flex;justify-content:space-between;gap:16px;text-transform:uppercase;color:#fff}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::after{content:"⌄";color:#fff;font-weight:400}
+  details.faq p{color:#c2c2c2;margin:14px 0 0;max-width:720px;font-size:17px;text-transform:none}
+  footer{border-top:1px solid #1c1c1c;padding:72px 0 32px;color:#999}
+  .footgrid{display:grid;gap:36px}
+  @media(min-width:860px){.footgrid{grid-template-columns:1.4fr 1fr 1fr}}
+  footer h3,footer h4{font-family:"Cormorant Garamond",serif;font-weight:700;letter-spacing:.03em;color:#fff;margin:0 0 14px}
+  footer .flink{display:block;text-decoration:none;padding:4px 0;color:#999;font-size:15px}
+  footer .flink:hover{color:#fff}
+  footer a.plain{display:block;text-decoration:none;padding:5px 0;color:#999}
+  footer a.plain:hover{color:#fff}
+  .giant{font-family:"Cormorant Garamond",serif;font-size:clamp(88px,21vw,240px);font-weight:700;letter-spacing:.02em;line-height:.85;color:#fff;text-align:center;margin:60px 0 8px;user-select:none}
+  .copy{border-top:1px solid #1c1c1c;margin-top:32px;padding-top:20px;font-size:14px;text-align:center}
+.footimg{position:relative;overflow:hidden;border-radius:12px;margin:36px 0 24px}
+.footimg>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(3px) brightness(.8);transform:scale(1.08)}
+.footimg .footshade{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.66))}
+.foottabs{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px 10px;padding:30px 18px}
+.foottabs>div{min-width:0}
+.footimg .fhead{color:#ddd;font-size:10px;letter-spacing:.1em}
+.footimg .flink{color:#fff;font-size:13px;line-height:1.5;text-shadow:0 1px 8px rgba(0,0,0,.65)}
+.footbrand{grid-column:1/-1}
+footer .footsup{font-size:13px;color:#777}
+footer .fhead{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#777;margin:0 0 10px}
+footer .fhead.mt{margin-top:26px}
+  .guide{display:grid;gap:28px;align-items:center;margin-top:40px}
+  @media(min-width:860px){.guide{grid-template-columns:1.2fr 1fr}}
+  .r18{border-radius:18px;border:1px solid #262626}
+  .btncenter{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
+  .logomarquee{overflow:hidden;padding:6px 0 4px}
+  .logotrack{display:flex;align-items:center;width:max-content;animation:logoscroll 34s linear infinite}
+  .logotile{display:flex;align-items:center;background:#000;border:1px solid #4a4a4a;border-radius:10px;padding:10px 14px;flex:none;margin-right:34px}
+  .logotile img{height:46px;width:auto;display:block;background:transparent;filter:brightness(1.8) saturate(1.5)}
+  @keyframes logoscroll{to{transform:translateX(-50%)}}
+  @media(min-width:860px){.logotile img{height:54px}}
+  @media(prefers-reduced-motion:reduce){.logotrack{animation:none}}
+  .cardrow{overflow:hidden;margin:26px calc(50% - 50vw) 0;width:100vw;padding:14px 16px;box-sizing:border-box}
+  .cardtrack{display:flex;width:max-content;animation:cardpass 18s ease-in-out infinite}
+  @keyframes cardpass{0%,22%{transform:translateX(0)}33%,55%{transform:translateX(calc(-1*(82vw + 12px)))}66%,88%{transform:translateX(calc(-2*(82vw + 12px)))}99%,100%{transform:translateX(calc(-3*(82vw + 12px)))}}
+  .minicard{flex:0 0 82vw;margin-right:12px;border-radius:12px;overflow:hidden;background:#000;text-decoration:none;animation:cardbob 3s ease-in-out infinite}
+  .minicard:nth-child(2),.minicard:nth-child(5){animation-delay:-1.5s}
+  @keyframes cardbob{0%,100%{transform:translateY(-10px)}50%{transform:translateY(10px)}}
+  @media(prefers-reduced-motion:reduce){.minicard{animation:none}.cardtrack{animation:none}}
+  .minicard img{width:100%;aspect-ratio:3/4;object-fit:contain;background:#000}
+  @media(min-width:860px){.cardrow{width:auto;max-width:760px;margin:26px auto 0;overflow:visible}.cardtrack{animation:none;margin:0 auto}.minicard{flex:0 0 240px}.minicard.dup{display:none}}
+  .foto-destaque{max-width:860px;margin:0 auto}
+  .foto-destaque img{border-radius:18px;border:1px solid #262626}
+  #alto-nivel{position:relative;overflow:hidden}
+  .alto-marquee{overflow:hidden;margin-top:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .alto-track{display:flex;gap:18px;width:max-content;animation:alto-scroll 40s linear infinite}
+  @keyframes alto-scroll{to{transform:translateX(-50%)}}
+  @media(hover:hover){.alto-track:hover{animation-play-state:paused}}
+  .alto{position:relative;flex:0 0 300px;height:470px;border-radius:24px;overflow:hidden;text-decoration:none;color:#fff}
+  @media(min-width:860px){.alto{flex-basis:340px;height:510px}}
+  .alto-bg{position:absolute;inset:-14px;z-index:0;background-size:cover;background-position:center;filter:brightness(.7)}
+  .alto::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 20%,rgba(5,3,4,.85) 55%,rgba(90,33,14,.92) 100%)}
+  .alto-txt{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:28px}
+  .alto-txt h3{font-size:32px;line-height:1.1;margin:0 0 12px;color:#fff}
+  .alto-btn{display:block;margin-top:18px;padding:16px;border-radius:999px;background:#fff;border:1px solid #fff;color:#5a210e;text-decoration:none;text-align:center;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 6px 20px rgba(0,0,0,.45)}
+  .alto-txt p{margin:0;font-size:15px;line-height:1.5;color:#d0d0d0}
+  .minicap{display:block;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#c2c2c2;padding:12px 6px 0}
+</style>
+</head>
+
+<body>
+<main>
+<div class="hero" id="topo">
+    <p class="hero-eyebrow" data-text="Microcrédito do futuro">Microcrédito do futuro</p>
+    <video class="hero-media" autoplay muted loop playsinline preload="metadata" src="/7ete/hero-formas-bater.mp4?v=2"></video>
+    <div class="hero-lockup"><svg class="hero-mark" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 28L132 6L144 18L28 52Z" fill="#cc2d17"/><path d="M18 58L118 42L126 56L32 78Z" fill="#cc2d17"/><path d="M34 86L104 70L96 92L44 104Z" fill="#cc2d17"/></svg><span class="hero-brand">MICRO7SETE</span></div>
+    <div class="hero-cta"><a class="hero-btn" href="/7ete/simulador"><span class="hero-btn-text">Simular crédito</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a></div>
+  </div>
+
+  <div class="wrap" style="padding-top:44px">
+    <div class="logomarquee" aria-label="Logos"><div class="logotrack"><span class="logotile"><img src="/7ete/imagens/logos/logo-financico.png" alt="Financico"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-newhedge.png" alt="newhedge"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-talkato.png" alt="talkato"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-at-services.png" alt="AT Services"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-outtrade.png" alt="OUT·TRADE"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-financico.png" alt="" aria-hidden="true"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-newhedge.png" alt="" aria-hidden="true"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-talkato.png" alt="" aria-hidden="true"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-at-services.png" alt="" aria-hidden="true"></span><span class="logotile"><img src="/7ete/imagens/logos/logo-outtrade.png" alt="" aria-hidden="true"></span></div></div>
+    <div class="cardrow"><div class="cardtrack"><a class="minicard" href="/7ete/simulador"><img src="/7ete/imagens/card-decisao-certa.jpg" alt="A decisão certa começa aqui"><span class="minicap">A decisão certa começa aqui</span></a><a class="minicard" href="/7ete/simulador"><img src="/7ete/imagens/card-credito-pronto.jpg" alt="O seu crédito está pronto"><span class="minicap">O seu crédito está pronto</span></a><a class="minicard" href="/7ete/simulador"><img src="/7ete/imagens/card-sempre-frente.webp" alt="Sempre à frente"><span class="minicap">Sempre à frente</span></a><a class="minicard dup" href="/7ete/simulador" tabindex="-1" aria-hidden="true"><img src="/7ete/imagens/card-decisao-certa.jpg" alt=""></a><a class="minicard dup" href="/7ete/simulador" tabindex="-1" aria-hidden="true"><img src="/7ete/imagens/card-credito-pronto.jpg" alt=""></a><a class="minicard dup" href="/7ete/simulador" tabindex="-1" aria-hidden="true"><img src="/7ete/imagens/card-sempre-frente.webp" alt=""></a></div></div>
+      <div style="max-width:550px;margin:44px auto 0 0"><img class="r18" src="/7ete/imagens/img-10-mulher.webp" alt="Serviços 7ete no telemóvel"></div>
+      <div class="btncenter"><a class="hero-btn" href="/7ete/portal"><span class="hero-btn-text">Pagar prestação</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a><a class="hero-btn" href="/7ete/portal"><span class="hero-btn-text">Abrir o portal</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a></div>
+  </div>
+
+
+
+
+  <section class="block" id="alto-nivel">
+    <div class="wrap">
+      <h2 class="display">Microcrédito de alto nível</h2>
+      <p class="lead">Empréstimos robustos, gestão completa e tudo no site.</p>
+<div class="alto-marquee"><div class="alto-track"><div class="alto"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-casa-chaves.jpg)"></span><span class="alto-txt"><h3 class="display">Empréstimos robustos</h3><p>Crédito com garantia, do pedido à aprovação, acompanhado em cada etapa.</p><a class="alto-btn" href="/7ete/simulador">Simular crédito →</a></span></div><div class="alto"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-dinheiro-calculadora.jpg)"></span><span class="alto-txt"><h3 class="display">Juros bons</h3><p>Boas condições, apresentadas antes de aceitar, sem surpresas no valor total.</p><a class="alto-btn" href="/7ete/simulador">Simular crédito →</a></span></div><div class="alto"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-aperto-mao.jpg)"></span><span class="alto-txt"><h3 class="display">Gestão completa</h3><p>Pedidos, prestações e mensagens acompanhados no portal, do início ao fim.</p><a class="alto-btn" href="/7ete/simulador">Simular crédito →</a></span></div><div class="alto"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-chave-carro.jpg)"></span><span class="alto-txt"><h3 class="display">Pagamentos no site</h3><p>Pague as prestações por M-Pesa diretamente no portal.</p><a class="alto-btn" href="/7ete/simulador">Simular crédito →</a></span></div><div class="alto"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-casa-madeira.jpg)"></span><span class="alto-txt"><h3 class="display">Empréstimo no site</h3><p>Simule, envie o pedido e acompanhe tudo online, com vistoria presencial da garantia.</p><a class="alto-btn" href="/7ete/simulador">Simular crédito →</a></span></div><div class="alto"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-contrato.jpg)"></span><span class="alto-txt"><h3 class="display">Processo simples</h3><p>Conta, simulação e pedido num só lugar, sem voltas.</p><a class="alto-btn" href="/7ete/simulador">Simular crédito →</a></span></div><div class="alto" aria-hidden="true"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-casa-chaves.jpg)"></span><span class="alto-txt"><h3 class="display">Empréstimos robustos</h3><p>Crédito com garantia, do pedido à aprovação, acompanhado em cada etapa.</p><a class="alto-btn" href="/7ete/simulador" tabindex="-1">Simular crédito →</a></span></div><div class="alto" aria-hidden="true"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-dinheiro-calculadora.jpg)"></span><span class="alto-txt"><h3 class="display">Juros bons</h3><p>Boas condições, apresentadas antes de aceitar, sem surpresas no valor total.</p><a class="alto-btn" href="/7ete/simulador" tabindex="-1">Simular crédito →</a></span></div><div class="alto" aria-hidden="true"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-aperto-mao.jpg)"></span><span class="alto-txt"><h3 class="display">Gestão completa</h3><p>Pedidos, prestações e mensagens acompanhados no portal, do início ao fim.</p><a class="alto-btn" href="/7ete/simulador" tabindex="-1">Simular crédito →</a></span></div><div class="alto" aria-hidden="true"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-chave-carro.jpg)"></span><span class="alto-txt"><h3 class="display">Pagamentos no site</h3><p>Pague as prestações por M-Pesa diretamente no portal.</p><a class="alto-btn" href="/7ete/simulador" tabindex="-1">Simular crédito →</a></span></div><div class="alto" aria-hidden="true"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-casa-madeira.jpg)"></span><span class="alto-txt"><h3 class="display">Empréstimo no site</h3><p>Simule, envie o pedido e acompanhe tudo online, com vistoria presencial da garantia.</p><a class="alto-btn" href="/7ete/simulador" tabindex="-1">Simular crédito →</a></span></div><div class="alto" aria-hidden="true"><span class="alto-bg" style="background-image:url(/imagens/emprestimo-contrato.jpg)"></span><span class="alto-txt"><h3 class="display">Processo simples</h3><p>Conta, simulação e pedido num só lugar, sem voltas.</p><a class="alto-btn" href="/7ete/simulador" tabindex="-1">Simular crédito →</a></span></div></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="foto-destaque"><img src="/7ete/imagens/chic-edificio-azul.jpg" alt="Edifício moderno à noite"></div>
+      <div class="btncenter"><a class="hero-btn" href="/7ete/simulador"><span class="hero-btn-text">Simular crédito</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="block" id="orientacoes">
+    <div class="wrap">
+      <h2 class="display">Orientação financeira para clientes</h2>
+      <p class="lead">Dicas de crédito para clientes</p>
+      <div class="guide">
+        <div>
+          <img class="r18" src="https://images.pexels.com/photos/6457511/pexels-photo-6457511.jpeg?auto=compress&amp;cs=tinysrgb" alt="Guia do cliente 7ete">
+        </div>
+        <div>
+          <h3 class="display" style="font-size:32px;margin:0 0 12px">Guia do cliente</h3>
+          <p class="lead">Como preparar um pedido de crédito com garantia</p>
+          <a class="hero-btn" href="/7ete/ofertas"><span class="hero-btn-text">Ver todas as ofertas</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div style="max-width:760px;margin:44px auto 0"><img class="r18" src="/7ete/imagens/img-6-portatil.webp" alt="Apresentação do crédito"></div>
+      <div class="btncenter"><a class="hero-btn" href="/7ete/simulador"><span class="hero-btn-text">Simular crédito</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <div class="wrap" style="padding-top:44px">
+    <div style="max-width:480px;margin:0 auto"><img class="r18" src="/7ete/imagens/img-1-avaliacao.webp" alt="Avaliação de cliente 7ete"></div>
+    <div class="btncenter"><a class="hero-btn" href="/7ete/portal"><span class="hero-btn-text">Pedir crédito</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a></div>
+    <div class="stats">
+        <div class="stat"><div class="mark">+</div><p>Pedidos acompanhados</p></div>
+        <div class="stat"><div class="mark">+</div><p>Compromisso com transparência</p></div>
+        <div class="stat"><div class="mark">M+</div><p>Gestão responsável do crédito</p></div>
+      </div>
+  </div>
+  <section class="block">
+    <div class="wrap">
+      <div style="max-width:860px;margin:0 auto"><img class="r18" src="/7ete/imagens/img-7-fisheye.webp" alt="Cliente sorridente no portátil"></div>
+      <p class="lead" style="margin-top:36px">Solicite crédito com clareza</p>
+      <div class="btnrow">
+        <a class="hero-btn" href="/7ete/portal"><span class="hero-btn-text">Entrar</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a>
+        <a class="hero-btn" href="/7ete/ofertas"><span class="hero-btn-text">Ver ofertas</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div style="max-width:500px;margin:44px 0 0 auto"><img class="r18" src="/7ete/imagens/img-2-pagamento.webp" alt="Pagamento confirmado"></div>
+          </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footgrid">
+      <div class="footbrand">
+        <h3>7ete</h3>
+        <p>Consulte ofertas, conheça as condições e acompanhe o seu pedido de crédito com garantia.</p>
+        <p class="footsup" style="margin-top:16px">Apoio ao cliente<br>Apoio através do portal do cliente<br>Atendimento em Maputo, Beira, Nampula e Pemba</p>
+      </div>
+    </div>
+    <div class="footimg"><img src="/7ete/imagens/rodape-edificio.jpg" alt=""><div class="footshade" aria-hidden="true"></div><div class="foottabs">
+      <div>
+        <h4 class="fhead">Navegação</h4>
+        <a class="flink" href="./">Início</a>
+        <a class="flink" href="#sobre">Sobre a 7ete</a>
+        <a class="flink" href="/7ete/ofertas">Ofertas de crédito</a>
+        <a class="flink" href="/7ete/simulador">Como funciona</a>
+      </div>
+      <div>
+        <h4 class="fhead">Apoio</h4>
+        <a class="flink" href="/7ete/portal">Portal</a>
+        <a class="flink" href="#orientacoes">Orientações</a>
+        <a class="flink" href="#orientacoes">Ajuda</a>
+        <a class="flink" href="/7ete/privacidade">Política de privacidade</a>
+      </div>
+      <div>
+        <h4 class="fhead">Redes sociais</h4>
+        <a class="flink" href="https://facebook.com">Facebook</a>
+        <a class="flink" href="https://instagram.com">Instagram</a>
+        <a class="flink" href="https://youtube.com">YouTube</a>
+      </div>
+    </div></div>
+    <div class="giant display" aria-hidden="true">7ete</div>
+    <p class="copy">© 2026 7ete. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<script>(function(){var el=document.querySelector('.hero-eyebrow');if(!el)return;var full=el.getAttribute('data-text')||el.textContent;if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var caret=document.createElement('span');caret.className='hero-caret';el.textContent='';el.appendChild(caret);var i=0;function step(){if(i<full.length){caret.insertAdjacentText('beforebegin',full[i]);i++;setTimeout(step,90);}else{caret.style.display='none';}}setTimeout(step,500);})();</script>
+</body>
+</html>

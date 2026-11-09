@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>7ete</title>
+<script>
+(function () {
+  var seg = 1; // /7ete/ is one path segment below the domain root
+  var l = window.location;
+  var path = l.pathname.split("/").slice(1 + seg).join("/");
+  var qs = l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "";
+  var url = l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
+    "/" + l.pathname.split("/").slice(0, 1 + seg).join("/") + "/?/" + path + qs + l.hash;
+  l.replace(url);
+})();
+</script>
+</head>
+<body></body>
+</html>
