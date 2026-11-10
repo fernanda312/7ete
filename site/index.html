@@ -7,16 +7,18 @@
 <meta name="description" content="7ete — microcrédito com garantia em Moçambique. Condições claras, análise responsável e acompanhamento digital do pedido.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;700;800&family=Pinyon+Script&family=Playfair+Display:ital,wght@1,400;1,600&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@100;200&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;700;800&family=Pinyon+Script&family=Playfair+Display:ital,wght@1,400;1,600&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@100;200&family=Syncopate:wght@700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#000;color:#fff;overflow-x:hidden}
-  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
-  p,li{font-weight:300}
+  body{font-family:"Archivo",system-ui,sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+  p,li{font-weight:400}
   a{color:inherit}
   img,video{display:block;width:100%;height:auto;background:#000}
   .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
-  .display{font-family:"Cormorant Garamond",serif;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+  .display{font-family:"Archivo",system-ui,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;background:linear-gradient(90deg,#5a210e 0%,#e0aa6e 25%,#5a210e 50%,#e0aa6e 75%,#5a210e 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:deslizar-degrade 6s linear infinite}
+@keyframes deslizar-degrade{from{background-position:0% 50%}to{background-position:200% 50%}}
+@media (prefers-reduced-motion:reduce){.display{animation:none}}
   .script{font-family:"Pinyon Script",cursive;font-weight:400;text-transform:none;letter-spacing:0;font-size:.95em}
   .btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:17px 32px;border-radius:6px;text-decoration:none;font-weight:800;font-size:16px;border:0;cursor:pointer;text-transform:uppercase;letter-spacing:.03em}
   .btn-grad{background:linear-gradient(135deg,#5a210e 0%,#050304 100%);color:#fff;border:1px solid #5a210e}
@@ -34,10 +36,9 @@
 @media (prefers-reduced-motion:reduce){.hero-name{animation:none}}
   .hero-logo{position:absolute;top:18px;left:18px;width:52px;height:auto;z-index:2;pointer-events:none;background:transparent}
 .hero-lockup{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:14px}
-.hero-mark{height:44px;width:auto;aspect-ratio:160/120;display:block}
-.hero-brand{font-family:"Montserrat",sans-serif;font-weight:200;font-size:clamp(26px,6.5vw,48px);letter-spacing:.12em;color:#fff;white-space:nowrap}
-@media(min-width:768px){.hero-mark{height:56px}}
-.hero-eyebrow{position:absolute;top:22px;left:50%;transform:translateX(-50%);z-index:3;margin:0;font-family:"Montserrat",sans-serif;font-weight:100;font-size:clamp(11px,3.2vw,20px);letter-spacing:.35em;text-indent:.35em;text-align:center;white-space:nowrap;text-transform:uppercase;color:#fff}
+.hero-logo-img{height:64px;width:auto;display:block}
+@media(min-width:768px){.hero-logo-img{height:80px}}
+.hero-eyebrow{position:absolute;top:22px;left:50%;transform:translateX(-50%);z-index:3;margin:0;font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-indent:.2em;text-align:center;white-space:nowrap;text-transform:uppercase;color:#8A8F93}
 .hero-caret{display:inline-block;width:2px;height:1em;margin-left:2px;background:#fff;vertical-align:-.1em;animation:caretblink .8s steps(1) infinite}
 @keyframes caretblink{0%,49%{opacity:1}50%,100%{opacity:0}}
 @media (min-width:768px){.hero-eyebrow{top:28px}}
@@ -45,7 +46,7 @@
   @media(min-width:860px){.hero-logo{width:68px;top:24px;left:28px}}
   .lead{color:#c2c2c2;font-size:18px;line-height:1.65;max-width:640px;margin:0 0 28px}
   .center .lead{margin-left:auto;margin-right:auto}
-  section.block{padding:96px 0;border-top:1px solid #1c1c1c}
+  section.block{padding:96px 0;border-top:1px solid #26292C}
   @media(max-width:859px){section.block{padding:64px 0}}
   h2{font-size:clamp(30px,8.5vw,110px);line-height:1.02;margin:0 0 24px;color:#fff}
   .center{text-align:center}
@@ -53,31 +54,31 @@
   .muted{color:#999;margin:8px 0 18px}
   .steps{display:grid;gap:16px;margin-top:40px}
   @media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
-  .step{padding:30px;border:1px solid #262626;border-radius:18px;background:#0e0e0e}
-  .step .num{font-size:64px;font-weight:800;line-height:1;color:#fff}
-  .step h3{font-family:"Cormorant Garamond",serif;font-weight:700;letter-spacing:.03em;font-size:24px;margin:16px 0 10px;color:#fff}
+  .step{padding:30px;border:1px solid #26292C;border-radius:20px;background:#10141A}
+  .step .num{font-size:64px;font-weight:800;line-height:1;color:#8A8F93}
+  .step h3{font-family:"Archivo",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;font-size:24px;margin:16px 0 10px;color:#fff}
   .step p{color:#c2c2c2;margin:0;font-size:17px}
-  .stats{display:grid;gap:18px;border-top:1px solid #262626;border-bottom:1px solid #262626;padding:30px 0;margin-top:40px}
+  .stats{display:grid;gap:18px;border-top:1px solid #26292C;border-bottom:1px solid #26292C;padding:30px 0;margin-top:40px}
   @media(min-width:860px){.stats{grid-template-columns:repeat(3,1fr)}}
   .stat{text-align:left}
-  .stat .mark{font-size:clamp(56px,7vw,84px);font-weight:800;line-height:1;letter-spacing:-.03em;color:#fff}
+  .stat .mark{font-family:"Archivo",system-ui,sans-serif;font-size:clamp(56px,7vw,84px);font-weight:800;line-height:1;letter-spacing:-.03em;color:#fff}
   .stat p{margin:10px 0 0;color:#c2c2c2;font-size:17px}
-  details.faq{border-top:1px solid #262626;padding:26px 0}
-  details.faq:last-of-type{border-bottom:1px solid #262626}
-  details.faq summary{cursor:pointer;font-family:"Cormorant Garamond",serif;font-weight:700;letter-spacing:.03em;font-size:clamp(20px,4.5vw,28px);list-style:none;display:flex;justify-content:space-between;gap:16px;text-transform:uppercase;color:#fff}
+  details.faq{border-top:1px solid #26292C;padding:26px 0}
+  details.faq:last-of-type{border-bottom:1px solid #26292C}
+  details.faq summary{cursor:pointer;font-family:"Archivo",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;font-size:clamp(20px,4.5vw,28px);list-style:none;display:flex;justify-content:space-between;gap:16px;text-transform:uppercase;color:#fff}
   details.faq summary::-webkit-details-marker{display:none}
   details.faq summary::after{content:"⌄";color:#fff;font-weight:400}
   details.faq p{color:#c2c2c2;margin:14px 0 0;max-width:720px;font-size:17px;text-transform:none}
-  footer{border-top:1px solid #1c1c1c;padding:72px 0 32px;color:#999}
+  footer{border-top:1px solid #26292C;padding:72px 0 32px;color:#999}
   .footgrid{display:grid;gap:36px}
   @media(min-width:860px){.footgrid{grid-template-columns:1.4fr 1fr 1fr}}
-  footer h3,footer h4{font-family:"Cormorant Garamond",serif;font-weight:700;letter-spacing:.03em;color:#fff;margin:0 0 14px}
+  footer h3,footer h4{font-family:"Archivo",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;text-transform:uppercase;color:#fff;margin:0 0 14px}
   footer .flink{display:block;text-decoration:none;padding:4px 0;color:#999;font-size:15px}
   footer .flink:hover{color:#fff}
   footer a.plain{display:block;text-decoration:none;padding:5px 0;color:#999}
   footer a.plain:hover{color:#fff}
-  .giant{font-family:"Cormorant Garamond",serif;font-size:clamp(88px,21vw,240px);font-weight:700;letter-spacing:.02em;line-height:.85;color:#fff;text-align:center;margin:60px 0 8px;user-select:none}
-  .copy{border-top:1px solid #1c1c1c;margin-top:32px;padding-top:20px;font-size:14px;text-align:center}
+  .giant{font-family:"Archivo",system-ui,sans-serif;font-size:clamp(88px,21vw,240px);font-weight:800;letter-spacing:-.02em;line-height:.85;text-align:center;margin:60px 0 8px;user-select:none}
+  .copy{border-top:1px solid #26292C;margin-top:32px;padding-top:20px;font-size:14px;text-align:center}
 .footimg{position:relative;overflow:hidden;border-radius:12px;margin:36px 0 24px}
 .footimg>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(3px) brightness(.8);transform:scale(1.08)}
 .footimg .footshade{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.66))}
@@ -91,15 +92,8 @@ footer .fhead{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color
 footer .fhead.mt{margin-top:26px}
   .guide{display:grid;gap:28px;align-items:center;margin-top:40px}
   @media(min-width:860px){.guide{grid-template-columns:1.2fr 1fr}}
-  .r18{border-radius:18px;border:1px solid #262626}
+  .r18{border-radius:18px;border:1px solid #26292C}
   .btncenter{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
-  .logomarquee{overflow:hidden;padding:6px 0 4px}
-  .logotrack{display:flex;align-items:center;width:max-content;animation:logoscroll 34s linear infinite}
-  .logotile{display:flex;align-items:center;background:#000;border:1px solid #4a4a4a;border-radius:10px;padding:10px 14px;flex:none;margin-right:34px}
-  .logotile img{height:46px;width:auto;display:block;background:transparent;filter:brightness(1.8) saturate(1.5)}
-  @keyframes logoscroll{to{transform:translateX(-50%)}}
-  @media(min-width:860px){.logotile img{height:54px}}
-  @media(prefers-reduced-motion:reduce){.logotrack{animation:none}}
   .cardrow{overflow:hidden;margin:26px calc(50% - 50vw) 0;width:100vw;padding:14px 16px;box-sizing:border-box}
   .cardtrack{display:flex;width:max-content;animation:cardpass 18s ease-in-out infinite}
   @keyframes cardpass{0%,22%{transform:translateX(0)}33%,55%{transform:translateX(calc(-1*(82vw + 12px)))}66%,88%{transform:translateX(calc(-2*(82vw + 12px)))}99%,100%{transform:translateX(calc(-3*(82vw + 12px)))}}
@@ -110,19 +104,19 @@ footer .fhead.mt{margin-top:26px}
   .minicard img{width:100%;aspect-ratio:3/4;object-fit:contain;background:#000}
   @media(min-width:860px){.cardrow{width:auto;max-width:760px;margin:26px auto 0;overflow:visible}.cardtrack{animation:none;margin:0 auto}.minicard{flex:0 0 240px}.minicard.dup{display:none}}
   .foto-destaque{max-width:860px;margin:0 auto}
-  .foto-destaque img{border-radius:18px;border:1px solid #262626}
+  .foto-destaque img{border-radius:18px;border:1px solid #26292C}
   #alto-nivel{position:relative;overflow:hidden}
   .alto-marquee{overflow:hidden;margin-top:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
   .alto-track{display:flex;gap:18px;width:max-content;animation:alto-scroll 40s linear infinite}
   @keyframes alto-scroll{to{transform:translateX(-50%)}}
   @media(hover:hover){.alto-track:hover{animation-play-state:paused}}
-  .alto{position:relative;flex:0 0 300px;height:470px;border-radius:24px;overflow:hidden;text-decoration:none;color:#fff}
+  .alto{position:relative;flex:0 0 300px;height:470px;border:1px solid #26292C;border-radius:20px;overflow:hidden;text-decoration:none;color:#fff}
   @media(min-width:860px){.alto{flex-basis:340px;height:510px}}
   .alto-bg{position:absolute;inset:-14px;z-index:0;background-size:cover;background-position:center;filter:brightness(.7)}
-  .alto::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 20%,rgba(5,3,4,.85) 55%,rgba(90,33,14,.92) 100%)}
+  .alto::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.85) 55%,rgba(16,20,26,.95) 100%)}
   .alto-txt{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:28px}
-  .alto-txt h3{font-size:32px;line-height:1.1;margin:0 0 12px;color:#fff}
-  .alto-btn{display:block;margin-top:18px;padding:16px;border-radius:999px;background:#fff;border:1px solid #fff;color:#5a210e;text-decoration:none;text-align:center;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 6px 20px rgba(0,0,0,.45)}
+  .alto-txt h3{font-size:32px;line-height:1.1;margin:0 0 12px}
+  .alto-btn{display:block;margin-top:18px;padding:16px;border-radius:0;background:linear-gradient(135deg,#5a210e 0%,#050304 100%);border:1px solid rgba(255,255,255,.4);color:#fff;text-decoration:none;text-align:center;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 6px 20px rgba(0,0,0,.4);font-family:"Archivo",system-ui,sans-serif}
   .alto-txt p{margin:0;font-size:15px;line-height:1.5;color:#d0d0d0}
   .minicap{display:block;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#c2c2c2;padding:12px 6px 0}
 </style>
@@ -133,12 +127,11 @@ footer .fhead.mt{margin-top:26px}
 <div class="hero" id="topo">
     <p class="hero-eyebrow" data-text="Microcrédito do futuro">Microcrédito do futuro</p>
     <video class="hero-media" autoplay muted loop playsinline preload="metadata" src="/hero-formas-bater.mp4?v=2"></video>
-    <div class="hero-lockup"><svg class="hero-mark" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 28L132 6L144 18L28 52Z" fill="#cc2d17"/><path d="M18 58L118 42L126 56L32 78Z" fill="#cc2d17"/><path d="M34 86L104 70L96 92L44 104Z" fill="#cc2d17"/></svg><span class="hero-brand">MICRO7SETE</span></div>
+    <div class="hero-lockup"><img src="/imagens/logo-7ete.png" alt="7ete" class="hero-logo-img"></div>
     <div class="hero-cta"><a class="hero-btn" href="/ofertas"><span class="hero-btn-text">Ver ofertas</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a></div>
   </div>
 
   <div class="wrap" style="padding-top:44px">
-    <div class="logomarquee" aria-label="Logos"><div class="logotrack"><span class="logotile"><img src="/imagens/logos/logo-financico.png" alt="Financico"></span><span class="logotile"><img src="/imagens/logos/logo-newhedge.png" alt="newhedge"></span><span class="logotile"><img src="/imagens/logos/logo-talkato.png" alt="talkato"></span><span class="logotile"><img src="/imagens/logos/logo-at-services.png" alt="AT Services"></span><span class="logotile"><img src="/imagens/logos/logo-outtrade.png" alt="OUT·TRADE"></span><span class="logotile"><img src="/imagens/logos/logo-financico.png" alt="" aria-hidden="true"></span><span class="logotile"><img src="/imagens/logos/logo-newhedge.png" alt="" aria-hidden="true"></span><span class="logotile"><img src="/imagens/logos/logo-talkato.png" alt="" aria-hidden="true"></span><span class="logotile"><img src="/imagens/logos/logo-at-services.png" alt="" aria-hidden="true"></span><span class="logotile"><img src="/imagens/logos/logo-outtrade.png" alt="" aria-hidden="true"></span></div></div>
     <div class="cardrow"><div class="cardtrack"><a class="minicard" href="/ofertas"><img src="/imagens/card-decisao-certa.jpg" alt="A decisão certa começa aqui"><span class="minicap">A decisão certa começa aqui</span></a><a class="minicard" href="/ofertas"><img src="/imagens/card-credito-pronto.jpg" alt="O seu crédito está pronto"><span class="minicap">O seu crédito está pronto</span></a><a class="minicard" href="/ofertas"><img src="/imagens/card-sempre-frente.webp" alt="Sempre à frente"><span class="minicap">Sempre à frente</span></a><a class="minicard dup" href="/ofertas" tabindex="-1" aria-hidden="true"><img src="/imagens/card-decisao-certa.jpg" alt=""></a><a class="minicard dup" href="/ofertas" tabindex="-1" aria-hidden="true"><img src="/imagens/card-credito-pronto.jpg" alt=""></a><a class="minicard dup" href="/ofertas" tabindex="-1" aria-hidden="true"><img src="/imagens/card-sempre-frente.webp" alt=""></a></div></div>
       <div style="max-width:550px;margin:44px auto 0 0"><img class="r18" src="/imagens/img-10-mulher.webp" alt="Serviços 7ete no telemóvel"></div>
       <div class="btncenter"><a class="hero-btn" href="/portal"><span class="hero-btn-text">Pagar prestação</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a><a class="hero-btn" href="/portal"><span class="hero-btn-text">Abrir o portal</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a></div>
