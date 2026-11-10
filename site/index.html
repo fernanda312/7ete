@@ -36,8 +36,9 @@
 @media (prefers-reduced-motion:reduce){.hero-name{animation:none}}
   .hero-logo{position:absolute;top:18px;left:18px;width:52px;height:auto;z-index:2;pointer-events:none;background:transparent}
 .hero-lockup{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:14px}
-.hero-logo-img{height:64px;width:auto;display:block}
-@media(min-width:768px){.hero-logo-img{height:80px}}
+.hero-mark{height:44px;width:auto;aspect-ratio:160/120;display:block}
+.hero-brand{font-family:"Montserrat",sans-serif;font-weight:200;font-size:clamp(26px,6.5vw,48px);letter-spacing:.12em;color:#fff;white-space:nowrap}
+@media(min-width:768px){.hero-mark{height:56px}}
 .hero-eyebrow{position:absolute;top:22px;left:50%;transform:translateX(-50%);z-index:3;margin:0;font-family:"Archivo",system-ui,sans-serif;font-weight:700;font-size:11px;letter-spacing:.2em;text-indent:.2em;text-align:center;white-space:nowrap;text-transform:uppercase;color:#8A8F93}
 .hero-caret{display:inline-block;width:2px;height:1em;margin-left:2px;background:#fff;vertical-align:-.1em;animation:caretblink .8s steps(1) infinite}
 @keyframes caretblink{0%,49%{opacity:1}50%,100%{opacity:0}}
@@ -127,7 +128,7 @@ footer .fhead.mt{margin-top:26px}
 <div class="hero" id="topo">
     <p class="hero-eyebrow" data-text="Microcrédito do futuro">Microcrédito do futuro</p>
     <video class="hero-media" autoplay muted loop playsinline preload="metadata" src="/hero-formas-bater.mp4?v=2"></video>
-    <div class="hero-lockup"><img src="/imagens/logo-7ete.png" alt="7ete" class="hero-logo-img"></div>
+    <div class="hero-lockup"><svg class="hero-mark" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 28L132 6L144 18L28 52Z" fill="#cc2d17"/><path d="M18 58L118 42L126 56L32 78Z" fill="#cc2d17"/><path d="M34 86L104 70L96 92L44 104Z" fill="#cc2d17"/></svg><span class="hero-brand">MICRO7SETE</span></div>
     <div class="hero-cta"><a class="hero-btn" href="/ofertas"><span class="hero-btn-text">Ver ofertas</span><span class="hero-btn-arrow" aria-hidden="true">→</span></a></div>
   </div>
 
